@@ -1,0 +1,67 @@
+.row {
+  margin-bottom: 20%;
+}
+
+.jumbotron {
+  padding: 10px;
+  margin-bottom: 50px;
+  color: white;
+  background-color: #2E294E;
+}
+
+h4 {
+  color: #1A172B;
+}
+
+
+#show {
+  margin: auto;
+  margin-top: 5%;
+  background-color: #F8F5F9;
+  color: #1A172B;
+  padding: 10%;
+
+}
+
+#show2 {
+  margin: auto;
+  margin-top: 5%;
+  color: #1A172B;
+  background-color: #F8F5F9;
+  padding: 10%;
+}
+
+.footer {
+  background-color: #820263;
+  width: 100%;
+  height: px;
+}
+
+.errorMessage {
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+}
+
+.stripe:nth-child(odd) {
+    background: #F8F5F9;
+}
+
+.stripe:nth-child(even) {
+    color: white;
+    background: #73648A;
+}
+
+.btn-primary {
+  outline: none;
+  border: 2px solid #820263;
+  background-color: white;
+  width: 60%;
+  padding: 10px;
+  color: #1A172B;
+  transition: background-color 0.5s;
+  cursor: pointer; }
+  .btn:hover, .btn-primary:hover {
+    background-color: #820263;
+    color: white;
+    border-color: #820263; }
