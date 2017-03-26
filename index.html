@@ -5,19 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>weather api</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link rel="stylesheet" href="app/css/normalize.css">
+    <link rel="stylesheet" href="app/css/styles.css">
 </head>
 
 <body>
+
   <div class="jumbotron">
-    <h1 class="text-center">Alla städers väderinfo & prognos</h1>
+    <div class="col-md-6">
+    </div>
+    <div>
+      <h1 class="text-center">Alla städers väderinfo & prognoser</h1>
+
+    </div>
+    <div class="col-md-6">
+    </div>
   </div>
+
+
+      <section class="container-fluid text-center">
+          <article class="row">
+            <div class="col-md-6">
+              <div id="display1"></div>
+            </div>
+            <div class="col-md-6">
+              <div id="display2">
+            </div>
+        </article>
+      </section>
 
 <!-- Väder -->
 
-
-<section class="container">
+<section class="container-fluid">
     <article class="row">
       <div class="col-md-6 mb-5">
         <h2 class="text-center">Väder</h2>
@@ -51,7 +71,7 @@
 
         <div id="show2"></div>
       </div>
-    </div>
+
   </article>
 </section>
 
@@ -68,7 +88,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="script.js" type="text/javascript"></script>
-    <!-- <script src="script2.js" type="text/javascript"></script> -->
+
+    <script type="text/javascript" src="app/js/moment/moment.js"></script>
+
+    <script type="text/javascript" src="app/js/script.js" ></script>
 </body>
 </html>

@@ -1,5 +1,9 @@
+body {
+font-family: 'Acme', sans-serif;
+}
+
 .row {
-  margin-bottom: 20%;
+  margin-bottom: 5%;
 }
 
 .jumbotron {
@@ -9,26 +13,24 @@
   background-color: #2E294E;
 }
 
-h4 {
-  color: #1A172B;
+h2, h3, h4, h5 {
+  color: #4d3c60;
+  line-height: 1.8;
 }
 
 
 #show {
   margin: auto;
   margin-top: 5%;
-  background-color: #F8F5F9;
-  color: #1A172B;
-  padding: 10%;
-
+  background-color: #FBFAFC;
+  padding: 5%;
 }
 
 #show2 {
   margin: auto;
   margin-top: 5%;
-  color: #1A172B;
-  background-color: #F8F5F9;
-  padding: 10%;
+  background-color: #FBFAFC;
+  padding: 5%;
 }
 
 .footer {
@@ -43,20 +45,22 @@ h4 {
   margin: auto;
 }
 
+.stripe {
+  line-height: 2;
+}
 .stripe:nth-child(odd) {
-    background: #F8F5F9;
+    background: #FBFAFC;
 }
 
 .stripe:nth-child(even) {
-    color: white;
-    background: #73648A;
+    background: #E2DCE8;
 }
 
 .btn-primary {
   outline: none;
   border: 2px solid #820263;
   background-color: white;
-  width: 60%;
+  width: 40%;
   padding: 10px;
   color: #1A172B;
   transition: background-color 0.5s;
@@ -65,3 +69,28 @@ h4 {
     background-color: #820263;
     color: white;
     border-color: #820263; }
+
+
+.form-control {
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: 60%;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #820263;
+  padding: 12px 8px;
+  border-radius: 0rem; }
+  .form-control:focus {
+    color: #4d3c60;
+    background-color: #F8F5F9;
+    border-color: #820263;
+    border-radius: 0 15px 0 0;
+  }
+  .form-control:focus::-webkit-input-placeholder {
+    transition: text-indent 0.3s 0.1s ease-in;
+    text-indent: -75%;
+    opacity: 1; }
+  .form-control [type=text] {
+    text-indent: 1; }
