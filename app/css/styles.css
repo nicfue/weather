@@ -9,8 +9,8 @@ font-family: 'Acme', sans-serif;
 .jumbotron {
   padding: 10px;
   margin-bottom: 50px;
-  color: white;
   background-color: #2E294E;
+  color: white;
 }
 
 h2, h3, h4, h5 {
@@ -34,9 +34,10 @@ h2, h3, h4, h5 {
 }
 
 .footer {
-  background-color: #820263;
-  width: 100%;
-  height: px;
+  background-color: #2A2647;
+  color: white;
+  height: 60px;
+  padding: 20px 0 0 0;
 }
 
 .errorMessage {

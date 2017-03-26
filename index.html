@@ -9,22 +9,17 @@
     <link rel="stylesheet" href="app/css/normalize.css">
     <link rel="stylesheet" href="app/css/styles.css">
 </head>
-
 <body>
-
   <div class="jumbotron">
     <div class="col-md-6">
     </div>
     <div>
       <h1 class="text-center">Alla städers väderinfo & prognoser</h1>
-
     </div>
     <div class="col-md-6">
     </div>
   </div>
-
-
-      <section class="container text-center">
+      <section class="container-fluid text-center">
           <article class="row">
             <div class="col-md-6">
               <div id="display1"></div>
@@ -36,7 +31,6 @@
       </section>
 
 <!-- Väder -->
-
 <section class="container">
     <article class="row">
       <div class="col-md-6 mb-5">
@@ -46,51 +40,43 @@
       <div class="mb-3">
         <input type="text" name="city" id="cityWeather" class="form-control" placeholder="Stad?"></input>
       </div>
-
       <div class="text-center">
         <button id="submitWeather" class="btn btn-primary mb-4">Visa väder</button>
       </div>
-      <div id="show"></div>
+        <div id="show">
+      </div>
     </div>
 
-
 <!-- Prognos -->
-
       <div class="col-md-6 mb-5">
         <h2 class="text-center">Väderprognos</h2>
         <h4 class="text-center">Ange en stad</h4>
       <span id="errorForecast"></span>
-
         <div class="mb-3">
-        <input type="text" name="city" id="cityForecast" class="form-control"         placeholder="Stad?"></input>
+          <input type="text" name="city" id="cityForecast" class="form-control" placeholder="Stad?"></input>
         </div>
-
         <div class="text-center">
-        <button id="submitForecast" class="btn btn-primary mb-4">Visa prognos</button>
+          <button id="submitForecast" class="btn btn-primary mb-4">Visa prognos</button>
         </div>
-
-        <div id="show2"></div>
+          <div id="show2">
+        </div>
       </div>
-
   </article>
 </section>
 
-
-<!-- <div class="footer">
+<div class="footer">
   <div class="container">
-      <div class="text-center text-white" style="padding-top:30px;">
-        <p class="copyright">Copyright &copy; Current Weather App</p>
-      </div>
+    <div class="text-center">
+      <p class="footer-text">Min väder app</p>
+    </div>
   </div>
-</div> -->
+</div>
 
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
     <script type="text/javascript" src="app/js/moment/moment.js"></script>
-
     <script type="text/javascript" src="app/js/script.js" ></script>
 </body>
 </html>

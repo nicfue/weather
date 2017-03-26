@@ -120,11 +120,11 @@ $(function() {
   })
 function showSunrise(data){
 
-  return '<h1>Soluppgång: '+ data.results.sunrise +' <br> <img src="app/pictures/sunrise.png" width="470" height="300" alt="sunrise"</1>';
+  return '<h2>Soluppgång: '+ data.results.sunrise +' <br> <img src="app/pictures/sunrise.png" width="470" height="300" alt="sunrise"</h2>';
 }
 
 function showSunset(data) {
-  return '<h1 class="sunset"> Solnegång: '+ data.results.sunset +' <br> <img src="app/pictures/sunset.png" width="450" height="320" alt="sunrise"</h1>';
+  return '<h2 class="sunset"> Solnegång: '+ data.results.sunset +' <br> <img src="app/pictures/sunset.png" width="450" height="320" alt="sunrise"</h2>';
   }
  })
 
