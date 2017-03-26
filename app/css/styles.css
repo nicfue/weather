@@ -19,16 +19,16 @@ h2, h3, h4, h5 {
 }
 
 
-#show {
+#weather {
   margin: auto;
-  margin-top: 5%;
+  margin-top: 7%;
   background-color: #FBFAFC;
   padding: 5%;
 }
 
-#show2 {
+#forecast {
   margin: auto;
-  margin-top: 5%;
+  margin-top: 7%;
   background-color: #FBFAFC;
   padding: 5%;
 }
