@@ -1,9 +1,9 @@
 # Min väderapp
 
--Nicolas Fuentes
--Kurs: JavaScript 2
--Utbildning: Frontend
--Uppgift: AJAX Assignment - Open APIs
+- Nicolas Fuentes
+- Kurs: JavaScript 2
+- Utbildning: Frontend
+- Uppgift: AJAX Assignment - Open APIs
 
 
 <img align="right" width="180" height="auto" src="http://cdn4.iconfinder.com/data/icons/iconsland-weather/PNG/256x256/Sunrise.png" alt="sunrise">
@@ -47,7 +47,7 @@ Beträffande delen för Väderprognos valde jag att enbart visa upp datum, tidpu
 
 ## Todo
 - Jag vill omvandla enheten för tid från AM PM till 24-timmars enhet.  
-- Jag vill lägga in kartor med olika kartfunktioner för exempelvis moln, temeperatur och vind. 
+- Jag vill lägga in kartor med olika kartfunktioner för exempelvis moln, temperatur och vind. 
 
  [**Weather map layers** @ openweathermap](http://openweathermap.org/api/maps)
  
