@@ -47,7 +47,7 @@ En sak jag inte har lyckats åstadkomma är att omvandla tiden från AM PM till 
  [**Weather map layers** @ openweathermap](http://openweathermap.org/api/maps)
  
  
-## Kort beskrivning:
-Länk till väderapplikationen
+## Länk till väderapplikationen:
+
 * [**Min väderapp**](https://github.com/nicfue/weather/)
 
