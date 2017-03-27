@@ -1,23 +1,40 @@
 body {
 font-family: 'Acme', sans-serif;
+font-size: 0.9rem;
 }
 
 .row {
-  margin-bottom: 5%;
+  margin-bottom: 2rem;
 }
 
 .jumbotron {
-  padding: 10px;
-  margin-bottom: 50px;
+  padding: 0.2rem;
+  margin-bottom: 3rem;
   background-color: #2E294E;
   color: white;
 }
 
 h2, h3, h4, h5 {
   color: #4d3c60;
+  font-weight: bold;
   line-height: 1.8;
 }
 
+.sunrisepic {
+  width: 65%;
+}
+
+.sunsetpic {
+  width: 65%;
+}
+
+.sunriseBox {
+  margin-bottom: 1rem;
+}
+
+.sunsetBox {
+  margin-top: 1rem;
+}
 
 #weather {
   margin: auto;
@@ -51,10 +68,12 @@ h2, h3, h4, h5 {
 }
 .stripe:nth-child(odd) {
     background: #FBFAFC;
+    padding: 1%;
 }
 
 .stripe:nth-child(even) {
     background: #E2DCE8;
+    padding: 1%;
 }
 
 .btn-primary {
