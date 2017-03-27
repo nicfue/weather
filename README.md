@@ -6,7 +6,7 @@ Utbildning: Frontend
 Uppgift: AJAX Assignment - Open APIs
 
 
-<img align="right" width="180" height"auto" src="http://cdn4.iconfinder.com/data/icons/iconsland-weather/PNG/256x256/Sunrise.png" alt="sunrise">
+<img align="right" width="180" height="auto" src="http://cdn4.iconfinder.com/data/icons/iconsland-weather/PNG/256x256/Sunrise.png" alt="sunrise">
 
 
 ## Kort beskrivning:
@@ -35,11 +35,9 @@ De metoder jag använt mig av är jQuery Ajax, getJSON och API.
 
 $ajax har jag använt när jag hämtat hem data från api på http://openweathermap.org.
 
-* [**Current weather data** @ openweathermap](http://openweathermap.org/current)
+* [**Current weather data**](http://openweathermap.org/current)
 
-* [**5 day / 3 hour forecast** @ openweathermap](http://openweathermap.org/forecast5)
-
-* [**Min väderapp** av Nicolas Fuentes_ @ GitHub](https://github.com/nicfue/weather/)
+* [**5 day / 3 hour forecast**](http://openweathermap.org/forecast5)
 
 
 I min arbetsprocess med javascript har jag börjat med att knappen och inmatningsfältet för väder. Därefter gick jag över till knappen och inmatningsfältet för väderprognoser. När dessa två var klara skrev jag koden för solnedgång och soluppgång. 
@@ -47,5 +45,9 @@ I min arbetsprocess med javascript har jag börjat med att knappen och inmatning
 En sak jag inte har lyckats åstadkomma är att omvandla tiden från AM PM till 24-timmars klockslag. Detta är någonting jag kommer försöka attt lösa. Sedan skulle jag även vilja lägga in olika kartfunktioner för att användaren enkelt ska kunna se på vädret utifrån olika kartparametrar.
 
  [**Weather map layers** @ openweathermap](http://openweathermap.org/api/maps)
-
+ 
+ 
+## Kort beskrivning:
+Länk till väderapplikationen
+* [**Min väderapp**](https://github.com/nicfue/weather/)
 
