@@ -141,7 +141,7 @@ function showSunrise(data){
 }
 // Funktionen "showSunset" skapas för att visa upp innehållet från JSON datan via parametern "data".
 function showSunset(data) {
-  return '<h2>Solnegång: '+ data.results.sunset +' <br><br> <img src="app/pictures/sunset.png" alt="sunrise" class="sunsetpic"</h2>';
+  return '<h2>Solnedgång: '+ data.results.sunset +' <br><br> <img src="app/pictures/sunset.png" alt="sunrise" class="sunsetpic"</h2>';
   }
  })
 

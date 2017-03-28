@@ -78,7 +78,7 @@ h2, h3, h4, h5 {
 
 .btn-primary {
   outline: none;
-  border: 2px solid #820263;
+  border: 2px solid #3F386B;
   background-color: white;
   width: 40%;
   padding: 10px;
@@ -86,9 +86,9 @@ h2, h3, h4, h5 {
   transition: background-color 0.5s;
   cursor: pointer; }
   .btn:hover, .btn-primary:hover {
-    background-color: #820263;
+    background-color: #3F386B;
     color: white;
-    border-color: #820263; }
+    border-color: #3F386B; }
 
 
 .form-control {
