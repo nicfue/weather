@@ -137,11 +137,11 @@ $(function() {
 
 // Funktionen "showSunrise" skapas för att visa upp innehållet från JSON datan via parametern "data".
 function showSunrise(data){
-  return '<h2>Soluppgång: '+ data.results.sunrise +' <br><br> <img src="/pictures/sunrise.png" alt="sunrise" class="sunrisepic"</h2>';
+  return '<h2>Soluppgång: '+ data.results.sunrise +' <br><br> <img src="pictures/sunrise.png" alt="sunrise" class="sunrisepic"</h2>';
 }
 // Funktionen "showSunset" skapas för att visa upp innehållet från JSON datan via parametern "data".
 function showSunset(data) {
-  return '<h2>Solnedgång: '+ data.results.sunset +' <br><br> <img src="/pictures/sunset.png" alt="sunrise" class="sunsetpic"</h2>';
+  return '<h2>Solnedgång: '+ data.results.sunset +' <br><br> <img src="pictures/sunset.png" alt="sunrise" class="sunsetpic"</h2>';
   }
  })
 
