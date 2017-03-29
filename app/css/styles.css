@@ -63,17 +63,18 @@ h2, h3, h4, h5 {
   margin: auto;
 }
 
-.stripe {
-  line-height: 2;
-}
-.stripe:nth-child(odd) {
-    background: #FBFAFC;
-    padding: 1%;
+.table-active {
+  margin: 0;
 }
 
-.stripe:nth-child(even) {
+.stripe:nth-child(1n) {
     background: #E2DCE8;
-    padding: 1%;
+    padding-left: 1rem;
+}
+
+.stripe2:nth-child(1n) {
+    background: #E2DCE8;
+    padding-left: 1rem;
 }
 
 .btn-primary {
@@ -110,7 +111,7 @@ h2, h3, h4, h5 {
   }
   .form-control:focus::-webkit-input-placeholder {
     transition: text-indent 0.3s 0.1s ease-in;
-    text-indent: -75%;
+    text-indent: -70%;
     opacity: 1; }
   .form-control [type=text] {
     text-indent: 1; }

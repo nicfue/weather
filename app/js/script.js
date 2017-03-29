@@ -13,7 +13,7 @@ $(document).ready(function() {
       if (city != '') {
         // Vi använder ajax metoden för att hämta datan via url, type och dataType. För att få ut värdena i Celcius lägger vi till units=metric.
         $.ajax({
-          url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric' + '&APPID=' + api_key,
+          url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric' + '&lang=se' + '&APPID=' + api_key,
           type: 'GET',
           dataType: 'jsonp',
           jsonpCallback: "ajax_request",
@@ -47,7 +47,7 @@ function showWeather(data) {
 // Här returneras all den data vi vill visa upp i HTML. Med plustecknet kan vi lägga till alla parametrar vi valt ut för display.
     return '<h2>Väder i '+ data.name +', '+ data.sys.country +'</h2>' +
     '<h2><img src="http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png"> '+ data.main.temp + '&deg;C</h2>' +
-           '<h6>'+ data.weather[0].description + '</h6> <br>' +
+           '<h4>'+ data.weather[0].description + '</h4> <br>' +
            '<h3>Moln: '+ data.clouds.all +'%</h3>' +
            '<h3>Temperatur: '+ data.main.temp +'&deg;C</h3>' +
            '<h3>Lufttryck: '+ data.main.pressure +' hPa</h3>' +
@@ -101,7 +101,7 @@ html = '<h2>5-dagars prognos med 3-timmars intevaller ' + data.city.name +', '+ 
 
 // Vi loopar igenom List objektet med forEach metoden och får ut datum och tid samt temperatur för respektive dag i prognosen. Skriver ut till HTML-tagg.
 data.list.forEach(function(currentValue, index, list) {
-  html += '<h4 class="table-active stripe">'+ currentValue.dt_txt +': '+ currentValue.main.temp +' &deg;C </h4>'
+  html += '<h4 class="table-active stripe"> '+ currentValue.dt_txt +' </h4>' + '<h3 class="table-active stripe2"> '+ currentValue.main.temp +' &deg;C </h3> <br>' ;
 })
 // Kallar på funktionen med .html
 $('#forecast').html(html)
@@ -141,7 +141,7 @@ function showSunrise(data){
 }
 // Funktionen "showSunset" skapas för att visa upp innehållet från JSON datan via parametern "data".
 function showSunset(data) {
-  return '<h2>Solnedgång: '+ data.results.sunset +' <br><br> <img src="pictures/sunset.png" alt="sunrise" class="sunsetpic"</h2>';
+  return '<h2>Solnedgång: '+ data.results.sunset +' <br><br> <img src="pictures/sunset.png" alt="sunset" class="sunsetpic"</h2>';
   }
  })
 
