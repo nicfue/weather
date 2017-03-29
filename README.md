@@ -1,4 +1,4 @@
-# Min väderapp
+# NF väder
 
 - Nicolas Fuentes
 - Kurs: JavaScript 2
@@ -52,7 +52,7 @@ Beträffande delen för Väderprognos valde jag att enbart visa upp datum, tidpu
  [**Weather map layers** @ openweathermap](http://openweathermap.org/api/maps)
  
  
-## Min väderapplikation
+## Liveversion av NF Väder
 
-* [**Min väderapp**](https://github.com/nicfue/weather/)
+* [**NF väder**](https://github.com/nicfue/weather/)
 
