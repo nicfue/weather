@@ -16,7 +16,6 @@ $(document).ready(function() {
           url: 'http://api.openweathermap.org/data/2.5/weather?q=' + city + '&units=metric' + '&lang=se' + '&APPID=' + api_key,
           type: 'GET',
           dataType: 'jsonp',
-          jsonpCallback: "ajax_request",
           // JSON datan från vår request sparas i funktionen "success" som vi sedan skickar vidare till funktionen "showWeather" för att visa upp innehållet i domen.
           success: function(data) {
               var result = showWeather(data);
@@ -33,6 +32,7 @@ $(document).ready(function() {
 
       }
   });
+
 // Funktionen "showWeather" skapas för att visa upp innehållet från JSON datan via parametern "data".
 function showWeather(data) {
 
@@ -49,12 +49,11 @@ function showWeather(data) {
     '<h2><img src="http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png"> '+ data.main.temp + '&deg;C</h2>' +
            '<h4>'+ data.weather[0].description + '</h4> <br>' +
            '<h3>Moln: '+ data.clouds.all +'%</h3>' +
-           '<h3>Temperatur: '+ data.main.temp +'&deg;C</h3>' +
-           '<h3>Lufttryck: '+ data.main.pressure +' hPa</h3>' +
-           '<h3>Luftfuktighet: '+ data.main.humidity +'%</h3>' +
+           '<h3>Vindhastighet: '+ data.wind.speed +' m/s</h3>' +
            '<h3>Min temp: '+ data.main.temp_min +'&deg;C</h3>' +
            '<h3>Max temp: '+ data.main.temp_max +'&deg;C</h3>' +
-           '<h3>Vindhastighet: '+ data.wind.speed +' m/s</h3>' +
+           '<h3>Luftfuktighet: '+ data.main.humidity +'%</h3>' +
+           '<h3>Lufttryck: '+ data.main.pressure +' hPa</h3>' +
            '<h3>Vindriktning: '+ data.wind.deg +'&deg;</h3>'+
            '<h3>Soluppgång: '+ sunrise_convert +' </h3>' +
            '<h3>Solnedgång: '+ sunset_convert +'</h3>';
@@ -73,7 +72,6 @@ function showWeather(data) {
           url: 'http://api.openweathermap.org/data/2.5/forecast?q=' + city + '&units=metric' + '&APPID=' + api_key,
           type: 'GET',
           dataType: 'jsonp',
-          jsonpCallback: "ajax_request",
           // JSON datan från vår request sparas i funktionen "success" som vi sedan skickar vidare till funktionen "showForecast" för att visa upp innehållet i domen.
           success: function(data) {
               var result = showForecast(data);
@@ -123,7 +121,6 @@ $(function() {
       url: 'http://api.sunrise-sunset.org/json?lat=' + loc[0] + '&lng=' + loc[1],
       type: "GET",
       dataType: 'jsonp',
-      jsonpCallback: "ajax_request",
       // JSON datan från vår request sparas i funktionen "success" som vi sedan skickar vidare till funktionen "showSunrise" och "showSunset" för att visa upp innehållet i domen.
       success: function(data) {
         console.log(data);
