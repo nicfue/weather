@@ -46,13 +46,7 @@ I min arbetsprocess med JavaScript har jag börjat med att hämta värdet från 
 Beträffande delen för Väderprognos valde jag att enbart visa upp datum, tidpunkt och temperatur. Slutligen gjorde jag funktionen för soluppgång och solnedgång som visas först på sidan. Här är tanken att den ska visa den exakta tidpunkten för solnedgång och soluppgång på den plats just du befinner dig på. För detta använde jag meotden getJSON för att hämta JSON data från (http://ipinfo.io/). Här får jag ut koordinaterna i form av en sträng som jag sedan konvertrar till en array. Därefter matar jag in värdena för latitude och longitude från arrayen i $ajax funktionen och sparar ned datan i en success funktion. Sedan skapade jag två olika funktioner för att visa upp datan i HTML. 
 
 ## Todos
-- Jag vill omvandla enheten för tid från AM PM till 24-timmars enhet.  
 - Jag vill lägga in kartor med olika kartfunktioner för exempelvis moln, temperatur och vind. 
 
  [**Weather map layers** @ openweathermap](http://openweathermap.org/api/maps)
  
- 
-## Liveversion av NF Väder
-
-* [**NF väder**](https://github.com/nicfue/weather/)
-
