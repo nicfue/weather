@@ -17,7 +17,7 @@ font-size: 0.9rem;
 h2, h3, h4, h5 {
   color: #4d3c60;
   font-weight: bold;
-  line-height: 1.8;
+  line-height: 1.5;
 }
 
 .sunrisepic {
@@ -29,25 +29,26 @@ h2, h3, h4, h5 {
 }
 
 .sunriseBox {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .sunsetBox {
   margin-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 #weather {
   margin: auto;
-  margin-top: 7%;
+  margin-top: 1.5rem;
   background-color: #FBFAFC;
-  padding: 5%;
+  padding: 1rem;
 }
 
 #forecast {
   margin: auto;
-  margin-top: 7%;
+  margin-top: 1.5rem;
   background-color: #FBFAFC;
-  padding: 5%;
+  padding: 1rem;
 }
 
 .footer {
@@ -68,13 +69,12 @@ h2, h3, h4, h5 {
 }
 
 .stripe:nth-child(1n) {
-    background: #E2DCE8;
-    padding-left: 1rem;
+    background: #F9F8FA;
 }
 
 .stripe2:nth-child(1n) {
-    background: #E2DCE8;
-    padding-left: 1rem;
+    background: #F9F8FA;
+    color: #680E4B;
 }
 
 .btn-primary {
@@ -91,7 +91,6 @@ h2, h3, h4, h5 {
     color: white;
     border-color: #3F386B; }
 
-
 .form-control {
   font-size: 20px;
   text-align: center;
@@ -103,6 +102,9 @@ h2, h3, h4, h5 {
   border-bottom: 2px solid #820263;
   padding: 12px 8px;
   border-radius: 0rem; }
+  &.focus{
+
+  }
   .form-control:focus {
     color: #4d3c60;
     background-color: #F8F5F9;

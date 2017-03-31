@@ -4,7 +4,6 @@ var api_key = '9464c10b789eff56ceff53e0cc4436fe';
 $(document).ready(function() {
 
   // Väder
-
   // Använder selectorn för att lägga till ett click event till knappen för väder, hämtar input från #submitWeather
   $('#submitWeather').click(function() {
 // Selectorn används för att hämta värdet från inmatningsfältet med id cityWeather
@@ -35,29 +34,34 @@ $(document).ready(function() {
 
 // Funktionen "showWeather" skapas för att visa upp innehållet från JSON datan via parametern "data".
 function showWeather(data) {
+  //Funktionen "timeConverter" konverterar tiden från AM/PM till 24timmars enhet
+  function timeConverter(UNIX_timestamp) {
+    let a = new Date(UNIX_timestamp*1000);
+    let hour = a.getUTCHours();
+    let min = a.getUTCMinutes();
+    let time = hour+':'+min;
+    return time;
+};
 
-  console.log(data);
-  var sunrise = data.sys.sunrise;
-  var sunset = data.sys.sunset;
-  var format = "LT";
-  var sunrise_convert = moment.unix(sunrise).format(format);
-  var sunset_convert = moment.unix(sunset).format(format);
+  let sunriseTime = timeConverter(data.sys.sunrise);
+  let sunsetTime = timeConverter(data.sys.sunset);
+  console.log(sunsetTime);
 
-
-// Här returneras all den data vi vill visa upp i HTML. Med plustecknet kan vi lägga till alla parametrar vi valt ut för display.
-    return '<h2>Väder i '+ data.name +', '+ data.sys.country +'</h2>' +
-    '<h2><img src="http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png"> '+ data.main.temp + '&deg;C</h2>' +
-           '<h4>'+ data.weather[0].description + '</h4> <br>' +
-           '<h3>Moln: '+ data.clouds.all +'%</h3>' +
-           '<h3>Vindhastighet: '+ data.wind.speed +' m/s</h3>' +
-           '<h3>Min temp: '+ data.main.temp_min +'&deg;C</h3>' +
-           '<h3>Max temp: '+ data.main.temp_max +'&deg;C</h3>' +
-           '<h3>Luftfuktighet: '+ data.main.humidity +'%</h3>' +
-           '<h3>Lufttryck: '+ data.main.pressure +' hPa</h3>' +
-           '<h3>Vindriktning: '+ data.wind.deg +'&deg;</h3>'+
-           '<h3>Soluppgång: '+ sunrise_convert +' </h3>' +
-           '<h3>Solnedgång: '+ sunset_convert +'</h3>';
+  // Här returneras all den data vi vill visa upp i HTML. Med plustecknet kan vi lägga till alla parametrar vi valt ut för display.
+  return '<h2>Väder i '+ data.name +', '+ data.sys.country +'</h2>' +
+  '<h2><img src="http://openweathermap.org/img/w/'+ data.weather[0].icon +'.png"> '+ data.main.temp + '&deg;C</h2>' +
+  '<h4>'+ data.weather[0].description + '</h4> <br>' +
+  '<h3>Moln: '+ data.clouds.all +'%</h3>' +
+  '<h3>Vindhastighet: '+ data.wind.speed +' m/s</h3>' +
+  '<h3>Min temp: '+ data.main.temp_min +'&deg;C</h3>' +
+  '<h3>Max temp: '+ data.main.temp_max +'&deg;C</h3>' +
+  '<h3>Luftfuktighet: '+ data.main.humidity +'%</h3>' +
+  '<h3>Lufttryck: '+ data.main.pressure +' hPa</h3>' +
+  '<h3>Vindriktning: '+ data.wind.deg +'&deg;</h3>'+
+  '<h3>Soluppgång: '+ sunriseTime +' </h3>'+
+   '<h3>Solnedgång: '+ sunsetTime +'</h3>';
 }
+
 
 // Prognos
 
@@ -99,14 +103,14 @@ html = '<h2>5-dagars prognos med 3-timmars intevaller ' + data.city.name +', '+ 
 
 // Vi loopar igenom List objektet med forEach metoden och får ut datum och tid samt temperatur för respektive dag i prognosen. Skriver ut till HTML-tagg.
 data.list.forEach(function(currentValue, index, list) {
-  html += '<h4 class="table-active stripe"> '+ currentValue.dt_txt +' </h4>' + '<h3 class="table-active stripe2"> '+ currentValue.main.temp +' &deg;C </h3> <br>' ;
+  html += '<h3 class="table-active stripe"> '+ currentValue.dt_txt +' </h3>' + '<h3 class="table-active stripe2"> '+ currentValue.main.temp +' &deg;C </h3> <br>' ;
 })
 // Kallar på funktionen med .html
 $('#forecast').html(html)
 }
 
 
-// sunrise & sunset
+// Sunrise & sunset
 // Funktion för att ta reda på vilken tid det blir soluppgång och solnedgång på din specifika lokalisering
 $(function() {
   var loc;
@@ -118,27 +122,28 @@ $(function() {
     console.log(loc);
     // Vi hämtar information från sunrise-sunset.org api och lägger till värdena för latitud och longitude från arrayen
     $.ajax({
-      url: 'http://api.sunrise-sunset.org/json?lat=' + loc[0] + '&lng=' + loc[1],
+      url: 'http://api.sunrise-sunset.org/json?lat=' + loc[0] + '&lng=' + loc[1] + '&lang=sv',
       type: "GET",
       dataType: 'jsonp',
       // JSON datan från vår request sparas i funktionen "success" som vi sedan skickar vidare till funktionen "showSunrise" och "showSunset" för att visa upp innehållet i domen.
       success: function(data) {
         console.log(data);
-        let sunrise  = showSunrise(data)
+        let sunrise  = showSunrise(data);
         $('#display1').html(sunrise);
-        let sunset = showSunset(data)
+        let sunset = showSunset(data);
         $('#display2').html(sunset);
       }
+
     })
   })
 
-// Funktionen "showSunrise" skapas för att visa upp innehållet från JSON datan via parametern "data".
-function showSunrise(data){
-  return '<h2>Soluppgång: '+ data.results.sunrise +' <br><br> <img src="pictures/sunrise.png" alt="sunrise" class="sunrisepic"</h2>';
-}
-// Funktionen "showSunset" skapas för att visa upp innehållet från JSON datan via parametern "data".
-function showSunset(data) {
-  return '<h2>Solnedgång: '+ data.results.sunset +' <br><br> <img src="pictures/sunset.png" alt="sunset" class="sunsetpic"</h2>';
+  // Funktionen "showSunrise" skapas för att visa upp innehållet från JSON datan via parametern "data".
+  function showSunrise(data){
+    return '<h2>Soluppgång: '+ data.results.sunrise +' <br><br> <img src="pictures/sunrise.png" alt="sunrise" class="sunrisepic"</h2>';
+  }
+  // Funktionen "showSunset" skapas för att visa upp innehållet från JSON datan via parametern "data".
+  function showSunset(data) {
+    return '<h2>Solnedgång: '+data.results.sunset +' <br><br> <img src="pictures/sunset.png" alt="sunset" class="sunsetpic"</h2>';
   }
  })
 
