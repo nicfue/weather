@@ -1,4 +1,4 @@
-# NF väder
+# NF Weather
 
 - Nicolas Fuentes
 - Kurs: JavaScript 2
