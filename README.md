@@ -50,3 +50,9 @@ Beträffande delen för Väderprognos valde jag att enbart visa upp datum, tidpu
 
  [**Weather map layers** @ openweathermap](http://openweathermap.org/api/maps)
  
+
+### [**Se livesidan**]( http://nicolasf.se/weather/)
+ 
+
+ 
+ 
