@@ -26,7 +26,6 @@ Det går att söka på alla städer i hela världen och få fram väderinformati
 - Soluppgång (AM)
 - Solnedgång PM)
 
-**Observera att tiden visas i AM och PM, där AM motsvarar tiden på förmiddagen och PM motsvarar tiden på eftermiddagen.**
 
 Det går att söka på en stad för att få fram en fem-dagars prognos med tre-timmars intervaller. 
 
